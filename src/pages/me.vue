@@ -1,4 +1,7 @@
-<script lang="ts"></script>
+<script lang="ts">
+  import Vue from 'vue'
+  import { store } from '@/stroes'
+</script>
 <template>
   <h1>Me</h1>
 </template>
