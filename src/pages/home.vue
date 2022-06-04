@@ -1,8 +1,5 @@
-<script lang="ts">
-
-</script>
+<script lang="ts" setup></script>
 <template>
-    <h1>hello</h1>
+  <h1>hello</h1>
 </template>
-<style lang="less">
-</style>
+<style lang="less"></style>
