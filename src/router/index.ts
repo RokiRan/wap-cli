@@ -11,6 +11,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Home',
     component: () => import(/* webpackChunkName: "Home" */ '@/pages/home.vue')
   },
+  {
+    path: '/animate',
+    name: 'Animate',
+    component: () => import(/* webpackChunkName: "Home" */ '@/pages/animate.vue')
+  },
   { path: '/', redirect: { name: 'Home' } }
 ]
 
