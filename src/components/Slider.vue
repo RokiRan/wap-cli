@@ -1,10 +1,9 @@
 <script lang="ts" setup>
   import { ref } from 'vue'
-
   const imgLength = 4
   const currentIndex = ref(0)
   const getImg = (index: number) => {
-    return `/src/assets/${index}.jpg`
+    return `/src/assets/images/${index}.jpg`
   }
   const getPostionMap = (index: number) => {
     const arr = [0, 1, 2, 3]
@@ -13,7 +12,6 @@
   const show = (index: number): Record<string, string> => {
     let z = imgLength - index
     let t = 65 - ((5 * (z + currentIndex.value)) % 4) * 5
-    console.log(t)
     return {
       zIndex: `${(z + currentIndex.value) % 4}`,
       top: '50%',
@@ -38,7 +36,7 @@
     margin: auto;
     position: relative;
     overflow: hidden;
-    background-image: url(/src/assets/bg.jpg);
+    // background-image: url(/src/assets/bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -52,7 +50,7 @@
       display: block;
       position: absolute;
       transition-duration: 1s;
-      transition-timing-function: ease-in-out;
+      transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
       img {
         width: 100%;
         height: 100%;
